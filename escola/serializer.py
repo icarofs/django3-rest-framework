@@ -19,3 +19,9 @@ class MatriculaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Matricula
         exclude = []  #Outra forma de trazer todos os fields da base de dados
+
+
+class ListaMatriculasAlunosSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Matricula
+        fields = ['curso', 'periodo']  #Trazendo informações por aluno
